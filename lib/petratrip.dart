@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'bottom.dart';
 class petra extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -282,22 +282,8 @@ class _ImageTransitionPageState extends State<ImageTransitionPage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      bottomNavigationBar: Bottom(),
     );
   }
 }
+
