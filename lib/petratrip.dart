@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'bottom.dart';
+import 'buttons.dart';
 class petra extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -188,93 +189,12 @@ class _ImageTransitionPageState extends State<ImageTransitionPage> {
                     const SizedBox(
                         height: 10), //between petra tours and hotels button
 //----------------------------//Container//----------------------------//
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.fromLTRB(5, 18, 20, 16),
-                      child: TextButton(
-                        onPressed: _hotelsbutton,
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color.fromARGB(58, 27, 15, 1)),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(
-                              Icons.hotel,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 110),
-                            Text(
-                              'Hotels',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    MyCustomContainer(text: 'Hotel',icon: Icons.hotel,onTap: _hotelsbutton,),
 //----------------------------//Container//----------------------------//
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.fromLTRB(5, 10, 20, 16),
-                      child: TextButton(
-                        onPressed: _tribsbutton,
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color.fromARGB(58, 27, 15, 1)),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(
-                              Icons.directions_bus,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 120),
-                            Text(
-                              'Trips',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    MyCustomContainer(text: 'Trips', icon:Icons.directions_bus , onTap: _tribsbutton),
 //----------------------------//Container//----------------------------//
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.fromLTRB(5, 10, 20, 16),
-                      child: TextButton(
-                        onPressed: _resandcafebutton,
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color.fromARGB(58, 27, 15, 1)),
-                        ),
-                        child: Row(
-                          children: const [
-                            Icon(
-                              Icons.local_cafe,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            SizedBox(width: 70),
-                            Text(
-                              'Restaurant & Cafe',
-                              style: TextStyle(
-                                color: Colors.white,
-                                // color: AppColors.buttomcolor,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    MyCustomContainer(text: 'Cafe', icon:Icons.local_cafe , onTap: _resandcafebutton)
+        
                   ],
                 ),
               ),
@@ -286,4 +206,3 @@ class _ImageTransitionPageState extends State<ImageTransitionPage> {
     );
   }
 }
-
